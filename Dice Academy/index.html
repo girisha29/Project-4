@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-20px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        .animate-slideIn {
+            animation: slideIn 1.5s ease-out forwards;
+        }
+         /* Carousel styles */
+         .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 1rem 0; 
+        }
+
+        .carousel-item {
+            min-width: 250px;
+            flex: none;
+            transition: 0.3s ease;
+        }
+        .carousel-item:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+        @keyframes text {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-text {
+  background-size: 200% 200%;
+  animation: text 5s ease-in-out infinite;
+}
+        /* Custom button hover effect */
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #6d28d9;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header Section -->
+   <header class="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-lg z-50">
+<div class=" container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Dice Academy</h1>
+    <div class="space-x-4">
+        <a href="#" class="hover:text-yellow-400 text-white">Portfolio</a>
+        <a href="#" class="hover:text-yellow-400 text-white">Placement</a>
+        <a href="#" class="hover:text-yellow-400 text-white">Courses</a>
+        <a href="#" class="hover:text-yellow-400 text-white">Hire From Us</a>
+        <a href="#" class="hover:text-yellow-400 text-white">Faculty</a>
+    </div>
+    <div class="flex items-center space-x-4">
+        <span class="text-gray-300">📞 9508222111</span>
+        <button class="bg-blue-400 px-4 py-2 rounded hover:bg-yellow-500">Register Now</button>
+    </div>
+
+</div>
+   </header>
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('./graphic-design.jpeg');">
+        <!-- Dark overlay for contrast -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center">
+            <h2 class="text-6xl font-extrabold animate-fadeIn">
+                The <span class="text-yellow-400">Future</span> of <span class="text-purple-400">Design</span> is Here
+            </h2>
+            <p class="text-lg mt-4 mb-8 animate-slideIn">Explore the world of design with our advanced programs and courses.</p>
+            <a href="#" class="btn bg-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out">Try Our Design Quiz Today!</a>
+        </div>
+         <!-- Floating Contact Buttons -->
+         <div class="fixed left-4 top-1/4 space-y-4 text-white">
+            <a href="#" class="block bg-purple-500 rounded-full p-3 shadow-md transform transition hover:scale-110"><img src="./phone-fill.png" alt=""></a>
+            <a href="#" class="block bg-purple-500 rounded-full p-3 shadow-md transform transition hover:scale-110"><img src="./mail-fill.png" alt=""></a>
+            <a href="#" class="block bg-purple-500 rounded-full p-3 shadow-md transform transition hover:scale-110"><img src="./whatsapp-fill.png" alt=""></a>
+        </div>
+        <div class="absolute right-4 top-1/3 transform -rotate-90 bg-yellow-400 text-black font-bold py-2 px-4 shadow-md cursor-pointer transition hover:bg-yellow-500">
+            ENQUIRE NOW
+        </div>
+       
+        </section>
+         <!-- Welcome Section -->
+    <section class="py-16 bg-white text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Welcome to Dice Institute of Design – The Leading Design Institute in Delhi</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+            Embark on a transformative journey with us in the heart of New Delhi. With experienced practitioners, comprehensive mentorship, project-based experiential learning, and exposure to cutting-edge industry trends, the institute is considered among the leading design institute in Delhi, shaping the next generation of design leaders for the 21st century.
+        </p>
+    </section>
+     <!-- News & Announcements Section -->
+     <section class="bg-black text-white py-10">
+        <div class="container mx-auto px-6">
+            <h3 class="text-2xl font-semibold mb-4">News & Announcements!!</h3>
+            <div class="carousel-container space-x-6 overflow-x-auto py-4 flex">
+   <!-- Carousel Item 1 -->
+   <div class="carousel-item bg-gray-800 rounded-lg shadow-lg p-4 min-w-[250px]">
+    <img src="./N-1.jpeg" alt="Admissions Open" class="rounded-t-lg w-[500px] h-[300px]">
+    <p class="text-center font-bold mt-2">Admissions Open</p>
+    <p class="text-sm mt-1">Creative Test</p>
+</div>
+ <!-- Carousel Item 2 -->
+ <div class="carousel-item bg-gray-800 rounded-lg shadow-lg p-4 min-w-[250px]">
+    <img src="./N-2.jpeg" alt="2025 Admissions Open" class="rounded-t-lg w-[500px] h-[300px]">
+    <p class="text-center font-bold mt-2">2025 Admissions Open</p>
+    <p class="text-sm mt-1">Application Deadline</p>
+</div>
+ <!-- Carousel Item 3 -->
+ <div class="carousel-item bg-gray-800 rounded-lg shadow-lg p-4 min-w-[250px] ">
+    <img src="./N-3.jpeg" alt="AI in the Classroom" class="rounded-t-lg  w-[500px] h-[300px]">
+
+    <p class="text-center font-bold mt-2">AI in the Classroom</p>
+    <p class="text-sm mt-1">Interactive Sessions</p>
+</div>
+ <!-- Carousel Item 4 -->
+ <div class="carousel-item bg-gray-800 rounded-lg shadow-lg p-4 min-w-[250px]">
+    <img src="./N-4.png" alt="The Impact of AI" class="rounded-t-lg w-[500px] h-[300px]">
+    <p class="text-center font-bold mt-2">The Courses</p>
+    <p class="text-sm mt-1">Workshop Details</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Flowchart -->
+<div class="bg-gray-900 text-gray-300 py-12 px-4">
+    <!-- Container for the flowchart -->
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-center text-bold ">Why Build your Career With Us?</h2>
+        <!-- First Step -->
+        <div class="relative mb-16 flex items-center">
+            <div class="flex-shrink-0 bg-green-600 rounded-full p-4 text-white text-2xl font-bold animate-bounce">
+                <img src="./placement.png" alt="">
+            </div>
+            <div class="ml-6">
+                <h2 class="text-green-400 text-xl font-semibold">100% Placement Guaranteed!!</h2>
+                <p class="text-gray-400">We have a dedicated placement cell that assists every student in securing a job in a renowned company.</p>
+            </div>
+            <div class="absolute w-full left-0 top-12 h-px bg-gray-700"></div>
+        </div>
+        
+        <!-- Second Step -->
+        <div class="relative mb-16 flex items-center">
+            <div class="flex-shrink-0 bg-purple-600 rounded-full p-4 text-white text-2xl font-bold animate-bounce">
+               <img src="./career.png" alt="">
+            </div>
+            <div class="ml-6">
+                <h2 class="text-purple-400 text-xl font-semibold">Career-oriented skill training</h2>
+                <p class="text-gray-400">Don’t just settle for a job. Look beyond to build a long-lasting and successful career.</p>
+            </div>
+            <div class="absolute w-full left-0 top-12 h-px bg-gray-700"></div>
+        </div>
+        
+        <!-- Third Step -->
+        <div class="relative mb-16 flex items-center">
+            <div class="flex-shrink-0 bg-red-600 rounded-full p-4 text-white text-2xl font-bold animate-bounce">
+                <img src="./industry.png" alt="">
+            </div>
+            <div class="ml-6">
+                <h2 class="text-red-400 text-xl font-semibold">Industry-focused curriculum</h2>
+                <p class="text-gray-400">Skills that are in demand. Tools that are in trend. Training that makes you ready from the word GO.</p>
+            </div>
+            <div class="absolute w-full left-0 top-12 h-px bg-gray-700"></div>
+        </div>
+ <!-- Fourth Step -->
+ <div class="relative mb-16 flex items-center">
+    <div class="flex-shrink-0 bg-yellow-600 rounded-full p-4 text-white text-2xl font-bold animate-bounce">
+        <img src="./instructors.png" alt="">
+    </div>
+    <div class="ml-6">
+        <h2 class="text-yellow-400 text-xl font-semibold">Industry trained instructors</h2>
+        <p class="text-gray-400">Each of our teachers has hands-on experience with industry projects, workflow, requirements and trends. That helps them deliver what works.</p>
+    </div>
+    <div class="absolute w-full left-0 top-12 h-px bg-gray-700"></div>
+</div>
+ <!-- Fifth Step -->
+ <div class="relative mb-16 flex items-center">
+    <div class="flex-shrink-0 bg-blue-600 rounded-full p-4 text-white text-2xl font-bold animate-bounce">
+        <img src="./instructors.png" alt="">
+    </div>
+    <div class="ml-6">
+        <h2 class="text-blue-400 text-xl font-semibold">Holistic training program</h2>
+        <p class="text-gray-400">	
+            Besides imparting technical skills, we train our students in soft skills, like communication, interview skills etc. so that they perform better at interviews and the job thereafter.</p>
+    </div>
+    <div class="absolute w-full left-0 top-12 h-px bg-gray-700"></div>
+</div>
+    </div>
+
+</div>
+<section class="py-16 mb-16 bg-gray-900 text-white">
+    <div class="container  text-center">
+      <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-lg mb-6">Have questions? We're here to help!</p>
+      <a href="mailto:contact@yourwebsite.com" class="inline-block px-8 py-3 bg-yellow-400 text-gray-800 font-semibold rounded-full shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:scale-105 hover:shadow-2xl hover:text-white transform">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+     <!-- Footer -->
+     <footer class="fixed bottom-0 left-0 w-full bg-black text-white py-4 px-6 z-50">
+        <div class="container mx-auto text-center">
+        <p>&copy; Empowering Your Digital Future - DiCE Academy</p>
+        </div>
+    </footer>
+</body>
+
+</html>
